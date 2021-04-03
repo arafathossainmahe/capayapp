@@ -108,7 +108,8 @@ class _GettingStartedScreenState extends State<GettingStartedScreen> {
                     padding: const EdgeInsets.all(20),
                     textColor: Colors.white,
                     onPressed: () {
-                      Navigator.of(context).pushNamed(LogIn.routeName);
+                      Route route=MaterialPageRoute(builder: (context)=>LogIn());
+                      Navigator.push(context, route);
                     },
                   ),
                 ],
