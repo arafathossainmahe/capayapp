@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class LogIn extends StatefulWidget {
-  static const routeName = '/login';
   @override
   _LogInState createState() => _LogInState();
 }
@@ -30,18 +29,16 @@ class _LogInState extends State<LogIn> {
                   child: Row(
                     children: [
                       Image.asset('assets/icons/IconL.png'),
-                      Text('Forgot your credential?')
+                      Padding(
+                        padding: const EdgeInsets.only(left: 134),
+                        child: Text('Forgot your credential?'),
+                      )
                     ],
                   ),
                 ),
               ),
               //SizedBox(height: 32),
-              Container(
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 116, left: 148),
-                  child: Image.asset('assets/icons/Thumb.png'),
-                ),
-              ),
+
               Padding(
                 padding: EdgeInsets.only(top: 156),
                 child: Container(
@@ -52,7 +49,7 @@ class _LogInState extends State<LogIn> {
                       topRight: Radius.circular(30),
                     ),
                   ),
-                  width: double.infinity,
+                  // width: double.infinity,
                   child: Padding(
                     padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
                     child: Column(
@@ -60,44 +57,57 @@ class _LogInState extends State<LogIn> {
                         SizedBox(
                           height: 15,
                         ),
-                        Center(
+                        Padding(
+                          padding: const EdgeInsets.only(top: 56),
+                          //child: Center(
                           child: Text(
                             "Let's Sign up",
                             style: TextStyle(
                                 fontSize: 24, fontWeight: FontWeight.bold),
                           ),
+                          //),
                         ),
                         SizedBox(
-                          height: 10,
+                          height: 8,
                         ),
                         Text('Wellcome back you have been missed'),
                         SizedBox(
                           height: 56,
                         ),
-                        Text('Phone Number'),
-                        TextFormField(
-                          decoration: InputDecoration(
-                              filled: true,
-                              fillColor: Color(0xffedffee),
-                              border: UnderlineInputBorder(
-                                  borderSide: BorderSide.none),
-                              hintText: '+880'),
+                        Column(
+                          children: [
+                            Text('Phone Number'),
+                            SizedBox(height: 14),
+                            TextFormField(
+                              decoration: InputDecoration(
+                                  filled: true,
+                                  fillColor: Color(0xffedffee),
+                                  border: UnderlineInputBorder(
+                                      borderSide: BorderSide.none),
+                                  hintText: '+880'),
+                            ),
+                          ],
                         ),
                         SizedBox(
-                          height: 10,
+                          height: 16,
                         ),
-                        Text('Password'),
-                        TextFormField(
-                          decoration: InputDecoration(
-                              filled: true,
-                              fillColor: Color(0xffedffee),
-                              border: UnderlineInputBorder(
-                                  borderSide: BorderSide.none),
-                              hintText: "Password",
-                              suffixIcon: Icon(
-                                Icons.remove_red_eye,
-                                color: Color(0xff29d65a).withOpacity(0.4),
-                              )),
+                        Column(
+                          children: [
+                            Text('Password'),
+                            SizedBox(height: 14),
+                            TextFormField(
+                              decoration: InputDecoration(
+                                  filled: true,
+                                  fillColor: Color(0xffedffee),
+                                  border: UnderlineInputBorder(
+                                      borderSide: BorderSide.none),
+                                  hintText: "Password",
+                                  suffixIcon: Icon(
+                                    Icons.remove_red_eye,
+                                    color: Color(0xff29d65a).withOpacity(0.4),
+                                  )),
+                            ),
+                          ],
                         ),
                         SizedBox(
                           height: 134,
@@ -140,6 +150,12 @@ class _LogInState extends State<LogIn> {
                       ],
                     ),
                   ),
+                ),
+              ),
+              Container(
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 116, left: 148),
+                  child: Image.asset('assets/icons/Thumb.png'),
                 ),
               ),
             ],
