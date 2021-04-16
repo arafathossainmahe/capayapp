@@ -1,3 +1,4 @@
+import 'package:capayapp/otp.dart';
 import 'package:flutter/material.dart';
 
 class LogIn extends StatefulWidget {
@@ -76,7 +77,9 @@ class _LogInState extends State<LogIn> {
                         ),
                         Column(
                           children: [
-                            Text('Phone Number'),
+                            Text(
+                              'Phone Number',
+                            ),
                             SizedBox(height: 14),
                             TextFormField(
                               decoration: InputDecoration(
@@ -128,7 +131,10 @@ class _LogInState extends State<LogIn> {
                               ),
                               padding: const EdgeInsets.all(20),
                               textColor: Colors.white,
-                              onPressed: () {},
+                              onPressed: () {
+                                Route route=MaterialPageRoute(builder: (context)=>Otp());
+                                Navigator.push(context, route);
+                              },
                             ),
                             FlatButton(
                               color: Colors.grey[100],
