@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:capayapp/login.dart';
+import 'package:capayapp/login/login.dart';
 import 'package:capayapp/onboarding/onboadinglist.dart';
 import 'package:capayapp/onboarding/onboarding.dart';
 import 'package:flutter/material.dart';
