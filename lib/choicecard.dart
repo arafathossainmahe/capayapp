@@ -48,53 +48,110 @@ class _ChoiceCardState extends State<ChoiceCard> {
             padding: const EdgeInsets.all(15),
             child: Container(
               width: 400,
-              height: 386,
+              height: 420,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(15),
               ),
               child: Column(
                 children: [
-                  Container(
-                    height: 24,
-                    width: 305,
-                    child: Text('Bank Account'),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 15),
+                    child: Container(
+                      height: 24,
+                      width: 305,
+                      child: Text('Bank Account'),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 40,
                   ),
                   Container(
-                    height: 201,
-                    width: 305,
+                    height: 225,
+                    width: 325,
                     child: GridView.builder(
                       itemCount: choiceCardList.length,
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 4),
                       itemBuilder: (BuildContext ctx, int index) {
-                        return Container(
-                          height: 65,
-                          width: 65,
-                          child: Image.asset(choiceCardList[index].imageurl),
+                        return Padding(
+                          padding: const EdgeInsets.only(top:8.0),
+                          child: Container(
+                            height: 105,
+                            width: 65,
+                            child: Image.asset(choiceCardList[index].imageurl),
+                          ),
                         );
-                        Text(choiceCardList[index].title);
                       },
                     ),
                   ),
+                  // ignore: deprecated_member_use
+                  Padding(
+                    padding: const EdgeInsets.all(20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        FlatButton(
+                          color: Color(0xffDFE1E5),
+                          onPressed: () {},
+                          child: Text('See All'),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
                 ],
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 15, right: 15),
-            child: Container(
-              width: 400,
-              height: 206,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(15),
+          Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left:15,right: 15),
+                child: Container(
+                  width: 400,
+                  height: 206,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 15),
+                        child: Container(
+                          height: 24,
+                          width: 305,
+                          child: Text('International Card'),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 40,
+                      ),
+                      Container(
+                        height: 110,
+                        width: 325,
+                        child: GridView.builder(
+                          itemCount: iCardList.length,
+                          gridDelegate:
+                              SliverGridDelegateWithFixedCrossAxisCount(
+                                  crossAxisCount: 4),
+                          itemBuilder: (BuildContext ctx, int index) {
+                            return Container(
+                              height: 93,
+                              width: 65,
+                              child: Image.asset(iCardList[index].imageUrl),
+                            );
+                          },
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ),
-              child: Padding(
-                padding: const EdgeInsets.only(top: 15, left: 15),
-                child: Text('International Card'),
-              ),
-            ),
+            ],
           ),
         ],
       ),
