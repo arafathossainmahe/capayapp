@@ -1,5 +1,5 @@
-import 'package:capayapp/choicecard.dart';
-import 'package:capayapp/choicecardlist.dart';
+import 'package:capayapp/choicecard/choicecard.dart';
+import 'package:capayapp/choicecard/choicecardlist.dart';
 import 'package:flutter/material.dart';
 
 class Otp extends StatefulWidget {
