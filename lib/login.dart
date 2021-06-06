@@ -29,26 +29,7 @@ class _LogInState extends State<LogIn> {
         child: SingleChildScrollView(
           child: Stack(
             children: [
-              Container(
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 72, left: 148),
-                  child: Image.asset('assets/icons/Thumb.png'),
-                ),
-              ),
-              // Padding(
-              //   padding: EdgeInsets.only(top: 100, left: 30),
-              //   child: Text(
-              //     "Hello.",
-
-              //   ),
-              // ),
-              // Padding(
-              //   padding: EdgeInsets.only(top: 160, left: 30),
-              //   child: Text(
-              //     "Create your account",
-
-              //   ),
-              // ),
+              
               Padding(
                 padding: EdgeInsets.only(top: 112),
                 child: Container(
@@ -63,6 +44,12 @@ class _LogInState extends State<LogIn> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
+                        Container(
+                child: Padding(
+                  padding: const EdgeInsets.only( left: 148),
+                  child: Image.asset('assets/icons/Thumb.png'),
+                ),
+              ),
                         SizedBox(
                           height: 15,
                         ),
